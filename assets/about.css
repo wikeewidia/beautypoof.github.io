@@ -1,0 +1,29 @@
+.main-content {
+  padding: 50px;
+  background-color: #fff;
+  color: #000;
+}
+
+.about-section h2 {
+  color: #8b0000;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+.about-section p {
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.about-section .tagline {
+  color: #8b0000;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}

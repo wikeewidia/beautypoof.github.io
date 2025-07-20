@@ -1,0 +1,98 @@
+.product-section {
+  padding: 40px;
+  margin-left: 100px; /* biar gak ketimpa sidebar */
+}
+
+.product-section h2 {
+  color: #8b0000;
+  font-size: 28px;
+  text-align: left;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-left:280px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive columns */
+  gap: 24px;
+  justify-content: center;
+  max-width: 1200px; /* batasi lebar maksimum */
+  margin: 0 auto; /* center grid */
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s;
+  max-width: 280px; /* batasi lebar maksimum card */
+  margin: 0 auto; /* center card jika perlu */
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 120px; /* tinggi lebih kecil untuk kontrol yang lebih baik */
+  object-fit: cover;
+  object-position: center; /* posisi gambar di tengah */
+  border-radius: 8px;
+  display: block; /* hapus space bawah gambar */
+  max-width: 100%;
+  border: 2px solid #f0f0f0; /* border tipis untuk frame */
+}
+
+.product-card h3 {
+  font-size: 16px;
+  color: #8b0000;
+  margin-top: 10px;
+  line-height: 1.4; /* spacing yang lebih baik */
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .product-card img {
+    height: 110px; /* lebih kecil di tablet */
+  }
+  
+  .product-section h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-section {
+    margin-left: 0; /* hilangkan margin sidebar di mobile */
+    padding: 20px;
+  }
+  
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+  }
+  
+  .product-card {
+    max-width: none;
+  }
+  
+  .product-card img {
+    height: 100px; /* lebih kecil di mobile */
+  }
+  
+  .product-section h2 {
+    font-size: 24px;
+    color: #8b0000;
+    font-weight: bold;
+  }
+}

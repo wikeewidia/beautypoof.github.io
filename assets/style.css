@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HEADER */
+header {
+  background-color: #fff;
+  padding-bottom: 10px;
+  border-bottom: 4px solid #8b0000;
+  position: relative;
+  z-index: 100;
+}
+
+/* Header bagian atas: logo dan nama perusahaan */
+.header-top {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo-img img {
+  height: 100px; 
+  object-fit: contain;
+}
+
+.brand-name h1 {
+  font-size: 56px;
+  font-weight: bold;
+  color: #8b0000;
+  letter-spacing: 65px;
+  margin-left: 38px;
+  margin-bottom: 20px;
+}
+
+/* Navigasi utama */
+.top-nav {
+  display: flex;
+  justify-content: left;
+  margin-left: 41px;
+  gap: 130px;
+  padding: 5px 0;
+  background-color: #fff;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: #8b0000;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* SIDEBAR */
+.side-nav {
+  position: absolute;
+  top: 220px; /* atur sesuai tinggi header */
+  left:40px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 10px;
+  background-color: white;
+  height: calc(100% - 220px);
+  width: 120px;
+  z-index: 10;
+}
+
+.side-nav a,
+.side-nav .dropbtn {
+  color: #8b0000;
+  padding: 30px 0;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 18px;
+}
+
+/* DROPDOWN - Metode 1: Hover dengan delay */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 120px;
+  top: 0;
+  background-color: #fff;
+  min-width: 160px;
+  border: 1px solid #8b0000;
+  z-index: 20;
+  flex-direction: column;
+  /* Tambahkan transisi smooth */
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  visibility: hidden;
+}
+
+.dropdown-content a {
+  color: #8b0000;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f5f5f5;
+}
+
+/* Dropdown muncul saat hover pada dropdown atau dropdown-content */
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Alternatif: Menambah area hover yang lebih besar */
+.dropdown::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -160px; /* Membuat area invisible untuk menjaga hover */
+  bottom: 0;
+  z-index: 19;
+  pointer-events: none;
+}
+
+.dropdown:hover::after {
+  pointer-events: auto;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  margin-left: 160px; /* kasih ruang agar tidak tertutup sidebar */
+  margin-top: 0px;
+  flex: 1;
+  padding: 0;
+  overflow: hidden;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 4px solid #8b0000;
+  font-size: 14px;
+}
